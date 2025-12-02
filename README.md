@@ -42,7 +42,7 @@ O projeto demonstra o uso de **Laravel** para backend, consumo de APIs, comandos
 
 **1. Clone o repositório**
 ```bash
-git clone [https://github.com/Str1NnG/teste-dev-laravel.git](https://github.com/Str1NnG/teste-dev-laravel.git)
+git clone https://github.com/Str1NnG/teste-dev-laravel.git
 cd teste-dev-laravel
 ```
 
@@ -111,5 +111,5 @@ Confira o sistema funcionando neste vídeo demonstrativo:
 ---
 
 <div align="center">
-    Developed with ❤️ by <a href="https://github.com/Str1NnG">Str1NnG</a> for the Laravel Tech Challenge.
+    Developed with ❤️ by <a href="https://github.com/Str1NnG">Str1NnG</a> for the Laravel Test Challenge.
 </div>
