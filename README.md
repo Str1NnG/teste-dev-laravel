@@ -106,10 +106,10 @@ npm run dev
 
 Confira o sistema funcionando neste vídeo demonstrativo:
 
-[]
+https://youtu.be/v4gody6FzYs
 
 ---
 
 <div align="center">
-    Developed with ❤️ by <a href="https://github.com/Str1NnG">Str1NnG</a> for the Laravel Test Challenge.
+    Developed with ❤️ by <a href="https://github.com/Str1NnG">Str1NnG</a> for the XMXCorp Laravel Developer Challenge.
 </div>
