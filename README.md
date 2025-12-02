@@ -1,64 +1,115 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 Laravel LoremIpsum Blog
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 
-## About Laravel
+## 📄 Descrição
+Um sistema web de blog que consome a API externa da **DummyJSON** para importar usuários, posts e comentários, persistindo todos os dados no banco relacional MySQL e oferecendo uma interface interativa e responsiva.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O projeto demonstra o uso de **Laravel** para backend, consumo de APIs, comandos Artisan personalizados e interface moderna com **Tailwind CSS**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Tecnologias Utilizadas
 
-## Learning Laravel
+- 🐘 **Laravel 12** (Framework PHP)
+- 🐬 **MySQL** (Banco de Dados)
+- 🎨 **Tailwind CSS v4** (Estilização via Vite)
+- ⚡ **Javascript (Fetch API)** (Interatividade AJAX)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ✨ Funcionalidades
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- ✅ **Importação de Dados:** Comando personalizado (`app:import-dummy`) para popular o banco via API.
+- ✅ **Listagem e Paginação:** Exibição de posts com paginação otimizada.
+- ✅ **Busca e Filtros:** Pesquisa por título e filtro clicável por Tags.
+- ✅ **Interatividade:** Sistema de Like/Dislike em tempo real (sem recarregar a página).
+- ✅ **Contador de Views:** Incremento automático de visualizações.
+- ✅ **Navegação Relacional:** Posts vinculados a usuários e comentários.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ⚙️ Instalação
 
-### Premium Partners
+### 📦 Pré-requisitos
+* PHP 8.2+
+* Composer
+* Node.js & NPM
+* MySQL
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 🚀 Passos
 
-## Contributing
+**1. Clone o repositório**
+```bash
+git clone [https://github.com/Str1NnG/teste-dev-laravel.git](https://github.com/Str1NnG/teste-dev-laravel.git)
+cd teste-dev-laravel
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**2. Instale as dependências**
+```bash
+composer install
+npm install
+```
 
-## Code of Conduct
+**3. Configure o banco de dados**
+* Copie o arquivo de exemplo:
+```bash
+cp .env.example .env
+```
+* Abra o arquivo `.env` e configure suas credenciais do MySQL:
+```ini
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=blog_loremipsum
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**4. Gere a chave da aplicação**
+```bash
+php artisan key:generate
+```
 
-## Security Vulnerabilities
+**5. Execute as migrations**
+* Isso criará as tabelas no banco de dados.
+```bash
+php artisan migrate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**6. Popule o banco de dados (Importante)**
+* Execute o comando personalizado para baixar os dados da API DummyJSON:
+```bash
+php artisan app:import-dummy
+```
 
-## License
+**7. Inicie o servidor**
+* Você precisará de dois terminais rodando simultaneamente:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# teste-dev-laravel
-Teste de desenvolvedor Laravel na empresa XMXCorp.
->>>>>>> 1e91048169a360b78a08723268697e7c0568d2db
+*Terminal 1 (Backend Laravel):*
+```bash
+php artisan serve
+```
+
+*Terminal 2 (Frontend/Vite):*
+```bash
+npm run dev
+```
+
+**8. Acesse o projeto**
+* Abra http://127.0.0.1:8000 no seu navegador.
+
+---
+
+## 📺 Apresentação do Projeto
+
+Confira o sistema funcionando neste vídeo demonstrativo:
+
+[]
+
+---
+
+<div align="center">
+    Developed with ❤️ by <a href="https://github.com/Str1NnG">Str1NnG</a> for the Laravel Tech Challenge.
+</div>
